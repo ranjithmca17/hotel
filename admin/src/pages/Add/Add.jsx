@@ -10,7 +10,8 @@ export default function Add({url}) {
         name: "",
         description: "",
         price: "",
-        category: "Salad"
+        category: "Salad",
+        stock:""
     });
     const [error, setError] = useState("");
 
@@ -31,6 +32,7 @@ export default function Add({url}) {
         formData.append('name', data.name);
         formData.append('description', data.description);
         formData.append('price', data.price);
+        formData.append('stock', data.stock);
         formData.append('category', data.category);
         if (image) {
             formData.append('image', image);
@@ -44,6 +46,7 @@ export default function Add({url}) {
                     name: "",
                     description: "",
                     price: "",
+                    stock:"",
                     category: "Salad"
                 });
                 setImage(null);
@@ -82,6 +85,15 @@ export default function Add({url}) {
                         value={data.name} 
                         name='name' 
                         placeholder='Type here' 
+                    />
+                </div>
+                <div className="add-product-name flex-col">
+                    <input 
+                        type="number" 
+                        onChange={onChangeHandler} 
+                        value={data.stock} 
+                        name='stock' 
+                        placeholder='Type here Stock' 
                     />
                 </div>
                 <div className="add-product-description">

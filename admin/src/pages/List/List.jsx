@@ -35,6 +35,7 @@ await fetchList();
             <b>Image</b>
             <b>Name</b>
             <b>Category</b>
+            <b>Stock</b>
             <b>Price</b>
             <b>Action</b>
         </div>
@@ -45,6 +46,7 @@ await fetchList();
                         <img src={`${url}/images/`+item.image} alt="" />
                         <p>{item.name}</p>
                         <p>{item.category}</p>
+                        <p>{item.stock}</p>
                         <p>${item.price}</p>
                         <p onClick={()=>removeFood(item._id)} className='cursor'>X</p>
                     </div>
