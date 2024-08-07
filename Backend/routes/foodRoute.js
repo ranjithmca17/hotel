@@ -18,9 +18,6 @@
 
 // foodRouter.post('/add',upload.single("image"),addFood)
 
-
-
-
 // module.exports=foodRouter;
 
 
